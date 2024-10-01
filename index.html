@@ -1,131 +1,16 @@
-<!doctype html>
-<!-- The following comment is to indicate the IFID. -->
-<!-- UUID://A7798F78-C870-11E2-90CC-606C662AE7E4// -->
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Ceteris Paribus</title>
-
-    <link rel="stylesheet" type="text/css" href="./media/css/undum.css">
-    <!-- Suppport for mobile devices. -->
-    <meta name="viewport" content="user-scalable=no, width=device-width">
-    <link rel="apple-touch-icon" href="./media/img/iphone/icon.png">
-    <link rel="apple-touch-startup-image" href="./media/img/iphone/splash.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <!--[if !IE]>-->
-    <link media="only screen and (max-width: 640px)"
-          rel="stylesheet" type="text/css" href="./media/css/undum-mobile.css">
-    <!--<![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="./media/css/story.css">
-  </head>
-  <body>
-
-    <div id="toolbar">
-      <h1>Ceteris Paribus</h1>
-      <div class="nav">
-        <a href="#" class="button" id="menu-button">Menu</a>
-      </div>
-    </div>
-    <ul id="menu">
-      <li><a href="#title, #content_wrapper">Story</a></li>
-      <li><a href="#character_panel">Character</a></li>
-      <li><a href="#info_panel">Information</a></li>
-    </ul>
-
-    <div id="page">
-      <canvas id="overlay"></canvas>
-      <img class="resource" id="flare" src="./media/img/flare.png"></img>
-      <img class="resource" id="air" src="./media/img/orbz_air.png"></img>
-      <img class="resource" id="death" src="./media/img/orbz_death.png"></img>
-      <img class="resource" id="earth" src="./media/img/orbz_earth.png"></img>
-      <img class="resource" id="fire" src="./media/img/orbz_fire.png"></img>
-      <img class="resource" id="ice" src="./media/img/orbz_ice.png"></img>
-      <img class="resource" id="life" src="./media/img/orbz_life.png"></img>
-      <img class="resource" id="lightning" src="./media/img/orbz_lightning.png"></img>
-      <img class="resource" id="machine" src="./media/img/orbz_machine.png"></img>
-      <img class="resource" id="moon" src="./media/img/orbz_moon.png"></img>
-      <img class="resource" id="nature" src="./media/img/orbz_nature.png"></img>
-      <img class="resource" id="spirit" src="./media/img/orbz_spirit.png"></img>
-      <img class="resource" id="sun" src="./media/img/orbz_sun.png"></img>
-      <img class="resource" id="water" src="./media/img/orbz_water.png"></img>
-      <div id="tools_wrapper">
-	<div id="info_panel" class="tools left">
-	  <h1>Ceteris Paribus</h1>
-	  <h2>An Interactive Fiction and Practice Jam Entry</h2>
-	  <h2>By Mæja Stefánsson</h2>
-	  <div class='buttons'>
-	    <a href="./instructions.html" target="_blank">Instructions</a><br>
-	    <a href="./about.html" target="_blank">About</a>
-          </div>
-	  <div class='buttons'>
-	    <button id="undo">Undo</button><br>
-          </div>
-        </div>
-	<div id="character_panel" class="tools right">
-          <div id="character">
-            <div id="character_text">
-              <div id="character_text_content"></div>
-            </div>
-            <div id="qualities"></div>
-          </div>
-        </div>
-      </div>
-
-      <div id="mid_panel">
-        <div id="title">
-          <div class="label">
-	    <h1>Ceteris Paribus</h1>
-	    <h2>An Interactive Fiction<br>and 2014 Practice Jam Entry</h2>
-	    <h2>By Mæja Stefánsson</h2>
-	    <noscript><p class="noscript_message">This story requires JavaScript.</p></noscript>
-	    <p class="click_message">click to begin</p>
-	  </div>
-	</div>
-
-	<div id="content_wrapper">
-          <div id="content">
-          </div>
-          <a name="end_of_content"></a>
-        </div>
-
-	<div id="legal">
-          <p>Copyright 2014 <a href="mailto:forritari.Maeja@gmail.com">Mæja Stefánsson</a>.</p>
-          <p>Created with (a modded version of) <a href="http://undum.com">Undum</a>.</p>
-        </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Bot Wins</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Better bot wins</h1>
     </div>
 
-    <div id="ui_library">
-      <div id="quality" class="quality">
-        <span class="name" data-attr="name"></span>
-        <span class="value" data-attr="value"></span>
-      </div>
-
-      <div id="quality_group" class="quality_group">
-        <h2 data-attr="title"></h2>
-        <div class="qualities_in_group">
-        </div>
-      </div>
-
-      <div id="progress_bar" class="progress_bar">
-        <span class="name" data-attr="name"></span>
-        <span class="value" data-attr="value"></span>
-        <div class="progress_bar_track">
-          <div class="progress_bar_color" data-attr="width">
-          </div>
-        </div>
-        <span class="left_label" data-attr="left_label"></span>
-        <span class="right_label" data-attr="right_label"></span>
-      </div>
-
-      <hr id="turn_separator">
-    </div>
-
-    <script type="text/javascript" charset="utf-8" src="./media/js/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="./media/js/jquery-ui.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="./media/js/undum.js"></script>
-    <script type="text/javascript" charset="utf-8" src="./media/js/story.js"></script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
