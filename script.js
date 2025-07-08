@@ -29,13 +29,13 @@ Recomendaciones
 Recomendando el despliegue inmediato de la Unidad Psi-7 para neutralizar la amenaza. Sugerimos también la eliminación de testigos y la supresión de datos en la red pública. Todo rastro de esta operación debe ser borrado para preservar la integridad de la Organización O`;
 
 const typingSound = new Audio("typewriter.mp3");
-typingSound.volume = 0.1;
+typingSound.volume = 0.2;
 
 const interferenceSound = new Audio("interference.mp3");
-interferenceSound.volume = 0.4;
+interferenceSound.volume = 1.0;
 
 let index = 0;
-const typingSpeed = 20;
+const typingSpeed = 10;
 
 function typeChar() {
   if (index < fullText.length) {
