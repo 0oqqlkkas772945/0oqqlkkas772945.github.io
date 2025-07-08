@@ -36,7 +36,7 @@ const interferenceSound = new Audio("interference.mp3");
 interferenceSound.volume = 1.0;
 
 let index = 0;
-const typingSpeed = 8;
+const typingSpeed = 2;
 
 // Frase clave exacta a buscar
 const triggerPhrase = "Todo rastro de esta operación debe ser borrado para preservar la integridad de la Organización O";
