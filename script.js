@@ -33,17 +33,23 @@ const typingSound = new Audio("typewriter.mp3");
 typingSound.volume = 0.3;
 
 const interferenceSound = new Audio("interference.mp3");
-interferenceSound.volume = 10.0;
+interferenceSound.volume = 1.0;
 
 let index = 0;
 const typingSpeed = 8;
+
+// Frase clave exacta a buscar
+const triggerPhrase = "Todo rastro de esta operación debe ser borrado para preservar la integridad de la Organización O";
 
 function typeChar() {
   if (index < fullText.length) {
     terminal.textContent += fullText[index];
     typingSound.currentTime = 0;
     typingSound.play();
-    if (fullText.substring(index - 30, index).includes("Todo rastro de esta operación")) {
+
+    // Verifica si ya se imprimió la frase clave
+    const currentText = terminal.textContent;
+    if (currentText.includes(triggerPhrase)) {
       setTimeout(() => {
         interferenceSound.play();
         setTimeout(() => {
@@ -52,6 +58,7 @@ function typeChar() {
       }, 500);
       return;
     }
+
     index++;
     setTimeout(typeChar, typingSpeed);
   }
